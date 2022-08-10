@@ -4,8 +4,26 @@
     class="border-black border-4 w-3/12 text-center px-3 pt-3 pb-10 mx-auto bg-green-500 mt-10"
   >
     <h1 class="font-bold mt-5">{{ event.title }}</h1>
-    <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
-    <p>{{ event.description }}</p>
+    <nav>
+      <RouterLink
+        class="underline hover:text-red-500"
+        :to="{ name: 'EventDetails' }"
+        >Details</RouterLink
+      >
+      |
+      <RouterLink
+        class="underline hover:text-red-500"
+        :to="{ name: 'EventRegister' }"
+        >Register</RouterLink
+      >
+      |
+      <RouterLink
+        class="underline hover:text-red-500"
+        :to="{ name: 'EventEdit' }"
+        >Edit</RouterLink
+      >
+    </nav>
+    <RouterView :event="event" />
   </div>
 </template>
 
