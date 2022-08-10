@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       events: null,
-      url: `http://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events`,
+      url: `https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events`,
     };
   },
   created() {
